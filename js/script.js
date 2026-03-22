@@ -95,26 +95,27 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   }
 
-  // Contact form handling
-  const contactForm = document.getElementById('contact-form');
-  const contactFeedback = document.getElementById('contact-feedback');
-  const contactCopy = document.getElementById('contact-copy');
-  if(contactCopy){
-    contactCopy.addEventListener('click', async ()=>{
-      try{ await navigator.clipboard.writeText(window.location.href + '#contact'); contactFeedback.textContent = 'Contact link copied to clipboard.'; }
-      catch(e){ contactFeedback.textContent = 'Copy failed. You can share: ' + (window.location.href + '#contact'); }
+  // Donation form handling
+  const donateForm = document.getElementById('donate-form');
+  const donateFeedback = document.getElementById('donate-feedback');
+  const donateCopy = document.getElementById('donate-copy');
+  if(donateCopy){
+    donateCopy.addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText(window.location.href + '#donate'); donateFeedback.textContent = 'Donation link copied to clipboard.'; }
+      catch(e){ donateFeedback.textContent = 'Copy failed. You can share: ' + (window.location.href + '#donate'); }
     });
   }
-  if(contactForm){
-    contactForm.addEventListener('submit', (e)=>{
+  if(donateForm){
+    donateForm.addEventListener('submit', (e)=>{
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if(!name || !email || !message){ contactFeedback.textContent = 'Please complete all fields.'; return; }
-      // Simple client-side success action - in a real site you'd POST to an endpoint
-      contactFeedback.textContent = 'Thanks, ' + (name.split(' ')[0] || '') + '! Your message has been noted.';
-      contactForm.reset();
+      const amount = document.getElementById('amount').value;
+      const payment = document.getElementById('payment').value;
+      if(!name || !email || !amount || !payment){ donateFeedback.textContent = 'Please complete all fields.'; return; }
+      // Simple client-side success action - in a real site you'd process the donation
+      donateFeedback.textContent = 'Thank you, ' + (name.split(' ')[0] || '') + '! Your donation has been processed.';
+      donateForm.reset();
     });
   }
 });
