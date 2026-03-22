@@ -1,0 +1,1 @@
+This folder contains CSS for the static site. Edit `styles.css` to change layout, colors, or typography.
