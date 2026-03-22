@@ -25,7 +25,7 @@
         <li><a href="#mission">Our Mission</a></li>
         <li><a href="#partners">Our Partners</a></li>
         <li><a href="#timeline">Campaign Timeline</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#donate">Donate</a></li>
       </ul>
     </nav>
   </header>
@@ -43,7 +43,7 @@
         <p class="lead">Women in healthcare are increasingly unable to access healthcare in Afghanistan. Specifically, the MSF strongly condemns the restrictions on women to access education and ban on female NGO workers by Afghanistan. Limiting the participation of women in the Afghan workforce will lead to detrimental consequences for all.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#about">About Us</a>
-          <a class="btn btn-outline" href="#contact">Contact Us</a>
+          <a class="btn btn-outline" href="#donate">Donate</a>
         </div>
       </div>
     </section>
@@ -158,27 +158,42 @@
         </div>
       </div>
     </section>
-    <!-- CONTACT -->
-    <section id="contact" class="section fade-up cta" aria-labelledby="contact-heading">
+    <!-- DONATE -->
+    <section id="donate" class="section fade-up cta" aria-labelledby="donate-heading">
       <div class="container">
-        <h2 id="contact-heading">Contact Us</h2>
-        <p class="lead">Questions, partnership inquiries, or media requests? Reach out to our campaign team.</p>
+        <h2 id="donate-heading">Donate</h2>
+        <p class="lead">Your support helps us provide essential healthcare education and services to women in Afghanistan. Every contribution makes a difference.</p>
         <div class="contact-grid" style="max-width:720px;margin:0 auto;text-align:left;">
-          <form id="contact-form" class="card" aria-label="Contact form">
+          <form id="donate-form" class="card" aria-label="Donation form">
             <label for="name">Full name</label>
             <input id="name" name="name" type="text" required placeholder="Your full name" style="width:100%;padding:.6rem;margin:.4rem 0;border-radius:6px;border:1px solid rgba(16,24,32,0.06)">
 
             <label for="email">Email</label>
             <input id="email" name="email" type="email" required placeholder="you@example.org" style="width:100%;padding:.6rem;margin:.4rem 0;border-radius:6px;border:1px solid rgba(16,24,32,0.06)">
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="How can we help?" style="width:100%;padding:.6rem;margin:.4rem 0;border-radius:6px;border:1px solid rgba(16,24,32,0.06)"></textarea>
+            <label for="amount">Donation Amount</label>
+            <select id="amount" name="amount" required style="width:100%;padding:.6rem;margin:.4rem 0;border-radius:6px;border:1px solid rgba(16,24,32,0.06)">
+              <option value="">Select amount</option>
+              <option value="25">$25</option>
+              <option value="50">$50</option>
+              <option value="100">$100</option>
+              <option value="250">$250</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="payment">Payment Method</label>
+            <select id="payment" name="payment" required style="width:100%;padding:.6rem;margin:.4rem 0;border-radius:6px;border:1px solid rgba(16,24,32,0.06)">
+              <option value="">Select payment method</option>
+              <option value="credit">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank">Bank Transfer</option>
+            </select>
 
             <div style="display:flex;gap:.5rem;align-items:center;margin-top:.6rem;">
-              <button class="btn btn-primary" type="submit">Send Message</button>
-              <button class="btn btn-outline" type="button" id="contact-copy">Copy Contact Link</button>
+              <button class="btn btn-primary" type="submit">Donate Now</button>
+              <button class="btn btn-outline" type="button" id="donate-copy">Copy Donation Link</button>
             </div>
-            <div id="contact-feedback" aria-live="polite" style="margin-top:.6rem;color:var(--muted)"></div>
+            <div id="donate-feedback" aria-live="polite" style="margin-top:.6rem;color:var(--muted)"></div>
           </form>
         </div>
       </div>
@@ -199,7 +214,7 @@
             <li><a href="#mission">Our Mission</a></li>
             <li><a href="#partners">Partners</a></li>
             <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#donate">Donate</a></li>
           </ul>
         </nav>
         <address class="muted" style="margin-top:.6rem">Email: HTHSCI2DS3@msf.ca</address>
